@@ -1,8 +1,4 @@
-# nodesummit2016
-Hardware Day Zero information
-
-## License
-
+/*
 The MIT License (MIT)
 
 Copyright (c) 2016 Bryan Hughes <bryan@nebri.us>, Alex Glow <alex@hackster.io>,
@@ -25,3 +21,34 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+*/
+
+#include "application.h"
+#include "dotstar/dotstar.h"
+
+#define NUMPIXELS 8 // Number of LEDs in strip
+
+// Hardware SPI is a little faster, but must be wired to specific pins
+// (Core/Photon/P1/Electron = pin A5 for data, A3 for clock)
+Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS, DOTSTAR_BGR);
+
+// led/r/g/b in decimal: LRRRGGGBBB
+int set_color(String data) {
+    int led = data.substring(0, 1).toInt();
+    int r = data.substring(1, 4).toInt();
+    int g = data.substring(4, 7).toInt();
+    int b = data.substring(7, 10).toInt();
+    strip.setPixelColor(led, r * 0x10000 + g * 0x100 + b);
+    strip.show();
+    return 0;
+}
+
+void setup() {
+  strip.begin();
+  strip.show();
+  strip.setBrightness(32);
+  Particle.function("set_color", set_color);
+}
+
+void loop() {
+}

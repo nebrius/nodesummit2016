@@ -1,8 +1,3 @@
-# nodesummit2016
-Hardware Day Zero information
-
-## License
-
 The MIT License (MIT)
 
 Copyright (c) 2016 Bryan Hughes <bryan@nebri.us>, Alex Glow <alex@hackster.io>,
