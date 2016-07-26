@@ -5,27 +5,21 @@ Hardware Day Zero information
 
 ## Connecting the particle
 
-1. Go to: [Particle build site](https://build.particle.io/) and create and account.  Keep this page open once an account is created.
-2.Go to the [Particle.io docs](https://docs.particle.io/guide/getting-started/intro/photon/) and click on **SETUP MY PHONTON**
-3.Do Step 1
-4.Afterwards, navigate to [Connecting over USB](https://docs.particle.io/guide/getting-started/connect/photon/) and follow those directions for your computer.
-5. After you run the command
-```sh
-particle setup
-```
-Your photon should be blinking a dark blue LED
+1. Go to: [Particle build site](https://build.particle.io/) and create and account.  Keep this page open once an account is created as we will be using it to do all of our development
+2. Go to the [Particle.io docs](https://docs.particle.io/guide/getting-started/intro/photon/) and click on **SETUP MY PHOTON** and follow step 1
+3. Navigate to [Connecting over USB](https://docs.particle.io/guide/getting-started/connect/photon/) and follow the instructions for your operating system.
+4. Plug your Photon into your computer and make sure it is blinking blue. If it is node, hold down the "mode" button for 5 seconds until it blinks blue.
+5. Run the command `particle setup`. A series of questions will pop up:
+    - **Would you like to continue with this one?** Yes
+    - **Found "Photon-****". Would you like to perform setup on this one now?** Yes
+    - **Would you like to manually enter your Wi-Fi network configuration?** No
+    - **Please select the network to which your Photon should connect:** //pick your network
+    - **Please enter your network password:** //type the password
+    - **Would you like to continue with the information shown above?**  Yes
 
-A series of questions will pop up:
-**Would you like to continue with this one?** Yes
-**Found "Photon-FHMS". Would you like to perform setup on this one now?** Yes
-**Would you like to manually enter your Wi-Fi network configuration?** No
-**Please select the network to which your Photon should connect:** //pick your network
-**Please enter your network password:** //type the password
- **Would you like to continue with the information shown above?**  Yes
+Once connected, you should see a color change on the photon from flashing blue to breathing cyan.
 
-Once connected, you should see a color change on the photon from a dark blue to light blue.
-
-## Getting the neo-pixels blinking
+## Hello World
 
 1. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your device connected.
 2. Search **dotstar**
@@ -33,6 +27,11 @@ Once connected, you should see a color change on the photon from a dark blue to 
 4. On the upper left hand corner, click on flash
 5. You should see pixels blinking.  If you don't, let us know.
 
+## Game Scoreboard
+
+For this
+
+## Animation Control
 
 ## License
 
