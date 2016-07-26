@@ -36,26 +36,34 @@ Next, let's get the DotStar LED strips to light up.
 
 Choose one of the two builds below, or do both if you're ambitious!
 
-To call the Particle SDK using the https module:
+To make calls to the Particle API, first install the SDK:
+
+```sh
+npm install particle-api-js@5.3.0
+```
+
+Then call it with:
 
 ```
-const https = require('https');
-
-const DEVICE_ID = 'Your Device Id';
+const DEVICE_ID = 'Your Device ID';
 const ACCESS_TOKEN = 'Your Access Token';
 
-const req = https.request({
-  hostname: 'api.particle.io',
-  port: 443,
-  path: `/v1/devices/${DEVICE_ID}/set_color`,
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  },
-  method: 'POST'
-});
+const Particle = require('particle-api-js');
+const particle = new Particle();
 
-req.write(`arg=02255000000&access_token=${ACCESS_TOKEN}`);
-req.end();
+var fnPr = particle.callFunction({
+  deviceId: DEVICE_ID,
+  name: 'set_color',
+  argument: '00255000255',
+  auth: ACCESS_TOKEN
+}).then(
+  (data) => {
+    console.log('Function called succesfully:', data);
+  },
+  (err) => {
+    console.log('An error occurred:', err);
+  }
+);
 ```
 
 ## Game Scoreboard
