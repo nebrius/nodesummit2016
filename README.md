@@ -1,7 +1,8 @@
 # nodesummit2016
-Hardware Day Zero information
 
-# GETTING STARTED WITH PARTICLE
+Hardware Day Zero information. Today we will walk through getting everyone started, and then you will be doing one of two builds!
+
+# Getting Started
 
 ## Connecting the particle
 
@@ -19,19 +20,39 @@ Hardware Day Zero information
 
 Once connected, you should see a color change on the photon from flashing blue to breathing cyan.
 
+### Hello World
+
 Next, let's get the DotStar LED strips to light up.
 
 1. Set up the circuit as such:
-
-2. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your device connected.
+![Photon Connections](https://theoreticalideations.com/static/fritzing_basic.png)
+2. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your Photon listed.
 3. Search **dotstar**
 4. Select "Use This Example"
 5. On the upper left hand corner, click on flash
-6. You should see pixels flashing.  If you don't, let us know.
+6. You're pixels should now be flashing!
+
+# Builds
+
+Choose one of the two builds below, or do both if you're ambitious!
 
 ## Game Scoreboard
 
-For this build
+For this build, we will be creating a visual scoreboard. The scoreboard will keep track of points in two player games in the form of a bar graph.
+
+To start, load your photon with the [scoreboard firmware](firmware/scoreboard.c) by coping the code into your Particle Build window (overwriting the Hello World sample), and flashing it to your photon.
+
+Each player will be represented by a different color and assigned to one side of the DotStar Strip. As players gain points, another dot will light up, starting from their side of the strip and moving toward the center. The first player to get to the center wins!
+
+This basic scorekeeping can be used for a variety of games implemented in the browser. The first game you will implement is Tic-Tac-Toe to keep things simple. When a player wins, the browser will send an AJAX request to a Node.js server.
+
+This Node.js server will use the [Particle Javascript SDK](https://docs.particle.io/reference/javascript/) to call a function named `set_color`. This method takes a specially formatted string of the form `LLRRRGGGBBB`, where `LL` is the number of the LED you want to light up, `RRR` is the red color channel, `GGG` is the green color channel, and `BBB` is the blue color channel. All of these numbers are in decimal.
+
+**Stretch goals**
+
+- Add support for multiple games that can be switched between using a button wired up to the Photon. The button can be wired up as:
+![Button Wiring](https://theoreticalideations.com/static/fritzing_button.png)
+- Modify the firmware to add a new Particle API method called `set_flash` that will flash the lights at a set rate.
 
 ## Animation Control
 

@@ -34,10 +34,10 @@ Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS, DOTSTAR_BGR);
 
 // led/r/g/b in decimal: LRRRGGGBBB
 int set_color(String data) {
-    int led = data.substring(0, 1).toInt();
-    int r = data.substring(1, 4).toInt();
-    int g = data.substring(4, 7).toInt();
-    int b = data.substring(7, 10).toInt();
+    int led = data.substring(0, 2).toInt();
+    int r = data.substring(2, 5).toInt();
+    int g = data.substring(5, 8).toInt();
+    int b = data.substring(8, 11).toInt();
     strip.setPixelColor(led, r * 0x10000 + g * 0x100 + b);
     strip.show();
     return 0;
