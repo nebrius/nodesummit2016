@@ -36,6 +36,28 @@ Next, let's get the DotStar LED strips to light up.
 
 Choose one of the two builds below, or do both if you're ambitious!
 
+To call the Particle SDK using the https module:
+
+```
+const https = require('https');
+
+const DEVICE_ID = 'Your Device Id';
+const ACCESS_TOKEN = 'Your Access Token';
+
+const req = https.request({
+  hostname: 'api.particle.io',
+  port: 443,
+  path: `/v1/devices/${DEVICE_ID}/set_color`,
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  method: 'POST'
+});
+
+req.write(`arg=02255000000&access_token=${ACCESS_TOKEN}`);
+req.end();
+```
+
 ## Game Scoreboard
 
 For this build, we will be creating a visual scoreboard. The scoreboard will keep track of points in two player games in the form of a bar graph.
