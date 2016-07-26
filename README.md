@@ -19,17 +19,19 @@ Hardware Day Zero information
 
 Once connected, you should see a color change on the photon from flashing blue to breathing cyan.
 
-## Hello World
+Next, let's get the DotStar LED strips to light up.
 
-1. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your device connected.
-2. Search **dotstar**
-3. Select "Use This Example"
-4. On the upper left hand corner, click on flash
-5. You should see pixels blinking.  If you don't, let us know.
+1. Set up the circuit as such:
+
+2. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your device connected.
+3. Search **dotstar**
+4. Select "Use This Example"
+5. On the upper left hand corner, click on flash
+6. You should see pixels flashing.  If you don't, let us know.
 
 ## Game Scoreboard
 
-For this
+For this build
 
 ## Animation Control
 
