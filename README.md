@@ -26,11 +26,18 @@ Next, let's get the DotStar LED strips to light up.
 
 1. Set up the circuit as such:
 ![Photon Connections](https://theoreticalideations.com/static/fritzing_basic.png)
-2. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your Photon listed.
-3. Search **dotstar**
-4. Select "Use This Example"
-5. On the upper left hand corner, click on flash
-6. You're pixels should now be flashing!
+2. Go back to the [Particle build page](https://build.particle.io/build/new)
+3. You should see your Photon listed under the "Devices" section
+4. Go to the "Libraries" section and search for **dotstar** under "Community Libraries"
+5. Select "Use This Example"
+6. Modify line 47 so that it says:
+
+```c
+Adafruit_DotStar strip = Adafruit_DotStar(NUMPIXELS);
+```
+
+7. On the upper left hand corner, click on flash
+8. You're pixels should now be flashing!
 
 # Builds
 
