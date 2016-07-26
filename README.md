@@ -9,11 +9,11 @@ Hardware Day Zero information
 2.Go to the [Particle.io docs](https://docs.particle.io/guide/getting-started/intro/photon/) and click on **SETUP MY PHONTON**
 3.Do Step 1
 4.Afterwards, navigate to [Connecting over USB](https://docs.particle.io/guide/getting-started/connect/photon/) and follow those directions for your computer.
-5. After you run the command 
+5. After you run the command
 ```sh
 particle setup
 ```
-Your photon should be blinking a dark blue LED 
+Your photon should be blinking a dark blue LED
 
 A series of questions will pop up:
 **Would you like to continue with this one?** Yes
@@ -29,8 +29,9 @@ Once connected, you should see a color change on the photon from a dark blue to 
 
 1. Go back to the [Particle build page](https://build.particle.io/build/new) and you should see your device connected.
 2. Search **dotstar**
-3. On the upper left hand corner, click on flash
-4. You should see pixels blinking.  If you don't, let us know.
+3. Select "Use This Example"
+4. On the upper left hand corner, click on flash
+5. You should see pixels blinking.  If you don't, let us know.
 
 
 ## License
