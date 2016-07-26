@@ -40,7 +40,7 @@ Choose one of the two builds below, or do both if you're ambitious!
 
 For this build, we will be creating a visual scoreboard. The scoreboard will keep track of points in two player games in the form of a bar graph.
 
-To start, load your photon with the [scoreboard firmware](firmware/scoreboard.c) by coping the code into your Particle Build window (overwriting the Hello World sample), and flashing it to your photon.
+To start, load your photon with the [scoreboard firmware](firmware/scoreboard.c) by copying the code into your Particle Build window (overwriting the Hello World sample), and flashing it to your Photon.
 
 Each player will be represented by a different color and assigned to one side of the DotStar Strip. As players gain points, another dot will light up, starting from their side of the strip and moving toward the center. The first player to get to the center wins!
 
@@ -55,6 +55,22 @@ This Node.js server will use the [Particle Javascript SDK](https://docs.particle
 - Modify the firmware to add a new Particle API method called `set_flash` that will flash the lights at a set rate.
 
 ## Animation Control
+
+For this build, we will be created an animated light stick that can be controlled remotely.
+
+To start, load your photon with the [animation firmware](firmware/animation.c) by copying the code into your Particle Build window (overwriting the Hello World sample), and flashing it to your Photon.
+
+This firmware comes preloaded with two animations: "flash" and "pulse". These can be switched between by calling an Particle API endpoint.
+
+For this build, we will create a Node.js app that switches between animations at a preset interval.
+
+This Node.js app will use the [Particle Javascript SDK](https://docs.particle.io/reference/javascript/) to call a function named `preset`. This method takes a single number that corresponds to the preset to use. `1` is the "fade" preset and `2` is the "pulse" preset. All of these numbers are in decimal.
+
+**Stretch Goals*
+
+- In the firmware there is a method called `set_value` that allows you to control various aspects of the animations. This method takes two numbers, the first is which value to set, and the second is what to set the value to, like a key-value pair in a JavaScript object. See the constants under `Settable Values` in the firmware for details. Expose this method to the Particle cloude so it can be called remotely.
+- Add your own animation! Take a look at the "fade" animation for an example
+- Create a web frontend to control the animation
 
 ## License
 

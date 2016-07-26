@@ -45,11 +45,14 @@ struct hsv {
 hsv rgb2hsv(rgb in);
 rgb hsv2rgb(hsv in);
 
-// Fade settings
+// *** Fade settings ***
 
-#define FADE_COLOR_SPACING 40
+// Settable values
 #define FADE_RATE 0
 #define FADE_DEFAULT_RATE 128
+
+// Other details
+#define FADE_COLOR_SPACING 40
 
 double fade_color_step = 0;
 
@@ -59,6 +62,7 @@ void fade_update_colors();
 
 // Pulse settings
 
+// Settable values
 #define PULSE_RATE 0
 #define PULSE_DEFAULT_RATE 64
 #define PULSE_HUE 1
@@ -66,6 +70,7 @@ void fade_update_colors();
 #define PULSE_SATURATION 2
 #define PULSE_DEFAULT_SATURATION 255
 
+// Other details
 double pulse_rate = 0;
 double pulse_current_brightness = 0;
 unsigned char pulse_current_direction = 0;
