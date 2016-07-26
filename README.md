@@ -70,6 +70,8 @@ This Node.js app will use the [Particle Javascript SDK](https://docs.particle.io
 
 - In the firmware there is a method called `set_value` that allows you to control various aspects of the animations. This method takes two numbers, the first is which value to set, and the second is what to set the value to, like a key-value pair in a JavaScript object. See the constants under `Settable Values` in the firmware for details. Expose this method to the Particle cloude so it can be called remotely.
 - Add your own animation! Take a look at the "fade" animation for an example
+- Add a button to switch between animations. Wire up the button as such:
+![Button Wiring](https://theoreticalideations.com/static/fritzing_button.png)
 - Create a web frontend to control the animation
 
 ## License
