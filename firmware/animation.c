@@ -26,7 +26,7 @@ SOFTWARE.
 #include <math.h>
 #include "dotstar/dotstar.h"
 
-#define NUM_PIXELS 8
+#define NUM_PIXELS 11
 #define FADE_PRESET 1
 #define PULSE_PRESET 2
 

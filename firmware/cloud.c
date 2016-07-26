@@ -26,7 +26,7 @@ SOFTWARE.
 #include "application.h"
 #include "dotstar/dotstar.h"
 
-#define NUMPIXELS 8 // Number of LEDs in strip
+#define NUMPIXELS 11 // Number of LEDs in strip
 
 // Hardware SPI is a little faster, but must be wired to specific pins
 // (Core/Photon/P1/Electron = pin A5 for data, A3 for clock)
